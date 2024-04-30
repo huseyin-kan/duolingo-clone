@@ -14,16 +14,16 @@ export default function Home() {
         <h1 className="text-xl lg:text-3xl font-bold max-w-[480px] text-center text-neutral-600">
           Learn, practice, and master new Languages with Lingo.
         </h1>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-y-2 max-w-[300px] w-full">
           <ClerkLoading>
             <Loader className="animate-spin size-5 text-muted-foreground"/>
           </ClerkLoading>
           <ClerkLoaded>
             <SignedOut>
-              <SignUpButton mode="modal" signInFallbackRedirectUrl={"/learn"} fallbackRedirectUrl={"/learn"}>
+              <SignUpButton mode="modal" fallbackRedirectUrl="/learn" signInFallbackRedirectUrl="/learn">
                 <Button variant={"secondary"} size={"lg"} className="w-full">Get Started</Button>
               </SignUpButton>
-              <SignInButton mode="modal" signUpFallbackRedirectUrl={"/learn"} fallbackRedirectUrl={"/learn"}>
+              <SignInButton mode="modal" fallbackRedirectUrl="/learn" signUpFallbackRedirectUrl="/learn">
                 <Button variant={"primaryOutline"} size={"lg"} className="w-full">I already have an account</Button>
               </SignInButton>
             </SignedOut>
