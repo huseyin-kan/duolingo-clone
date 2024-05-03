@@ -12,7 +12,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center gap-y-8">
         <h1 className="text-xl lg:text-3xl font-bold max-w-[480px] text-center text-neutral-600">
-          Learn, practice, and master new Languages with Lingo.
+          Learn, practice, and master new Languages with Bilng.
         </h1>
         <div className="flex flex-col gap-y-2 max-w-[300px] w-full">
           <ClerkLoading>
