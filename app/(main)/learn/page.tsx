@@ -20,13 +20,13 @@ const Learn = async () => {
       <StickyWrapper>
         <UserProgress 
         hasActiveSubscription={false}
-        hearts={5}
-        activeCourse={{title:"Spanish",imageSrc:"/es.svg"}}
-        points={100}
+        hearts={userProgress.hearts}
+        activeCourse={userProgress.activeCourse}
+        points={userProgress.points}
         />
       </StickyWrapper>
       <FeedWrapper>
-        <Header title='Spanish'/>
+        <Header title={userProgress.activeCourse.title}/>
       </FeedWrapper>
     </div>
   )
