@@ -3,13 +3,14 @@ import StickyWrapper from '@/components/sticky-wrapper'
 import React from 'react'
 import Header from './header'
 import UserProgress from '@/components/user-progress'
-import { getUserProgress } from '@/db/queries'
+import { getUnits, getUserProgress } from '@/db/queries'
 import { redirect } from 'next/navigation'
 
 const Learn = async () => {
   const userProgressData  = getUserProgress()
+  const unitsData = getUnits()
   
-  const [userProgress] = await Promise.all([userProgressData])
+  const [userProgress,units] = await Promise.all([userProgressData,unitsData])
 
   if(!userProgress || !userProgress.activeCourse){
     redirect("/courses")
@@ -27,6 +28,11 @@ const Learn = async () => {
       </StickyWrapper>
       <FeedWrapper>
         <Header title={userProgress.activeCourse.title}/>
+        {units.map((unit) => (
+          <div key={unit.id} className='mb-10'>
+            {JSON.stringify(unit)}
+          </div>
+        ))}
       </FeedWrapper>
     </div>
   )
