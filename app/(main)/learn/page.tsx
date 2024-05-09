@@ -31,7 +31,7 @@ const Learn = async () => {
         <Header title={userProgress.activeCourse.title}/>
         {units.map((unit) => (
           <div key={unit.id} className='mb-10'>
-            <Unit id={unit.id} order={unit.order} title={unit.title} description={unit.description} lessons={unit.lessons} activeLesson={null} activeLessonPercentage={0} />
+            <Unit id={unit.id} order={unit.order} title={unit.title} description={unit.description} lessons={unit.lessons} activeLesson={undefined} activeLessonPercentage={0} />
           </div>
         ))}
       </FeedWrapper>
