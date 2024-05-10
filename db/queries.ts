@@ -60,6 +60,7 @@ export const getUnits = cache(async() => {
 
     const normalizedData = data.map((unit) =>{
         const lessonWithCompletedStatus = unit.lessons.map((lesson) => {
+            if(lesson.challenges.length === 0) return {...lesson,completed:false}
             const allCompletedChallenges = lesson.challenges.every((challenge) => {
                 return challenge.challengeProgress && challenge.challengeProgress.length > 0 
                 && challenge.challengeProgress.every((progress) => progress.completed)
