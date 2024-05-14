@@ -85,7 +85,7 @@ const main = async () => {
                 imageSrc:"/man.png",
                 correct:true,
                 text:"el hombre",
-                audioSrc:"/es_man.svg"
+                audioSrc:"/es_man.mp3"
             },
             {
                 id:2,
@@ -93,7 +93,7 @@ const main = async () => {
                 imageSrc:"/woman.png",
                 correct:false,
                 text:"la mujer",
-                audioSrc:"/es_woman.svg"
+                audioSrc:"/es_woman.mp3"
             },
             {
                 id:3,
@@ -101,7 +101,7 @@ const main = async () => {
                 imageSrc:"/robot.png",
                 correct:false,
                 text:"el robot",
-                audioSrc:"/es_robot.svg"
+                audioSrc:"/es_robot.mp3"
             },
         ])
 
