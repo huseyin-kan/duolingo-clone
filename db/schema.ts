@@ -67,8 +67,8 @@ export const challengeOptions = pgTable("challenge_options", {
     challengeId: integer("challenge_id").references(() => challenges.id ,{onDelete:"cascade"}).notNull(),
     text:text("text").notNull(),
     correct:boolean("correct").notNull(),
-    imageSrc:text("image_src").notNull(),
-    audioSrc:text("audio_src").notNull(),
+    imageSrc:text("image_src"),
+    audioSrc:text("audio_src")
 })
 
 export const challengeOptionsRelations = relations(challengeOptions,({one}) =>({
@@ -82,7 +82,6 @@ export const challengeProgress = pgTable("challenge_progress", {
     id:serial("id").primaryKey(),
     userId:text("user_id").notNull(),
     challengeId: integer("challenge_id").references(() => challenges.id ,{onDelete:"cascade"}).notNull(),
-    text:text("text").notNull(),
     completed:boolean("completed").notNull().default(false),
 })
 
