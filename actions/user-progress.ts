@@ -72,7 +72,7 @@ export const reduceHearts = async (challengeId:number) => {
     const isPractice  = !!existingChallengeProgress
 
     if(isPractice){
-        return {error:"hearts"}
+        return {error:"practice"}
     }
 
     if(!currentUserProgress) throw new Error("User progress not found")
