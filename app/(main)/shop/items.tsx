@@ -37,9 +37,8 @@ const Items = ({
             createStripeUrl()
             .then((response) => {
                 if(response.data) {
-                    console.log(response.data);
                     
-                    window.location.href = response.data.url
+                    window.location.href = typeof response.data === "string" ? response.data : response.data.url
                 }
             })
             .catch(() => toast.error("Something went wrong"))
