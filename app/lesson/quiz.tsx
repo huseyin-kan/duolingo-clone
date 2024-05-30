@@ -154,7 +154,7 @@ const Quiz = ({
              <Image src={"/finished.svg"} alt='finished' width={100} height={100} className='hidden lg:block'/>   
              <Image src={"/finished.svg"} alt='finished' width={50} height={50} className='block lg:hidden'/>
              <h1 className='font-bold text-neutral-700 text-xl lg:text-3xl'>
-                Great job! <br /> You've completed the lesson
+                Great job! <br /> You&apos;ve completed the lesson
              </h1>
              <div className='flex items-center gap-x-4 w-full'>
                 <ResultCard  variant="points" value={challenges.length * 10}/>
@@ -162,7 +162,7 @@ const Quiz = ({
              </div>   
             </div>
             <Footer 
-                lessonId= {initialLessonId}
+                lessonId={initialLessonId}
                 status='completed'
                 onCheck={() => router.push("/learn")}
             />

@@ -25,7 +25,7 @@ const Quests = ({points}:Props) => {
         {quests.map((quest)=>{
           const progress = (points / quest.value) * 100;
           return (
-            <div className='flex border-t-2 items-center w-full p-4 gap-x-3'>
+            <div className='flex border-t-2 items-center w-full p-4 gap-x-3' key={quest.title}>
                 <Image src={"/points.svg"} alt='Points' width={40} height={40}/>
                 <div className='flex flex-col gap-y-1 w-full'>
                 <p className='text-sm font-bold text-neutral-700'>
