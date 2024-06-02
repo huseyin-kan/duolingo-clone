@@ -67,6 +67,18 @@ const main = async () => {
                 order:2,
                 title:"Verbs"
             },
+            {
+                id:3,
+                unitId:1,//Leran the basics of spanish
+                order:3,
+                title:"Verbs-2"
+            },
+            {
+                id:4,
+                unitId:1,//Leran the basics of spanish
+                order:4,
+                title:"Verbs-3"
+            },
         ])
 
         await db.insert(schema.challenges).values([
@@ -167,22 +179,140 @@ const main = async () => {
                 lessonId:2,//Verbs
                 type:"SELECT",
                 order:1,
-                question:'Which one of these is "the man" ?'
+                question:'Which one of these is “the boy”?'
             },
             {
                 id:5,
                 lessonId:2,//Verbs
                 type:"ASSIST",
                 order:2,
-                question:'"the man"'
+                question:'"the woman"'
             },
             {
                 id:6,
                 lessonId:2,//Verbs
                 type:"SELECT",
-                order:2,
-                question:'Which one of these is "the woman" ?'
+                order:3,
+                question:'Which one of these is “the girl”?'
             }
+        ])
+
+        await db.insert(schema.challengeOptions).values([
+            {
+                challengeId:4,//Which one of thes is the boy
+                imageSrc:"/man.png",
+                correct:false,
+                text:"el hombre",
+                audioSrc:"/es_man.mp3"
+            },
+            {
+                challengeId:4,//Which one of thes is the boy
+                imageSrc:"/girl.png",
+                correct:false,
+                text:"la nina",
+                audioSrc:"/es_girl.mp3"
+            },
+            {
+                challengeId:4,//Which one of thes is the boy
+                imageSrc:"/boy.png",
+                correct:true,
+                text:"el nino",
+                audioSrc:"/es_boy.mp3"
+            },
+        ])
+
+        await db.insert(schema.challengeOptions).values([
+            {
+                challengeId:5,//the woman
+                correct:true,
+                text:"la mujer",
+                audioSrc:"/es_woman.mp3"
+            },
+            {
+                challengeId:5,///the woman
+                correct:false,
+                text:"la nina",
+                audioSrc:"/es_girl.mp3"
+            },
+            {
+                challengeId:5,//the woman
+                correct:false,
+                text:"el nino",
+                audioSrc:"/es_boy.mp3"
+            },
+        ])
+
+        await db.insert(schema.challengeOptions).values([
+            {
+                challengeId:6,//Which one of thes is the girl
+                imageSrc:"/zombie.png",
+                correct:false,
+                text:"el zombie",
+                audioSrc:"/es_zombie.mp3"
+            },
+            {
+                challengeId:6,//Which one of thes is the girl
+                imageSrc:"/girl.png",
+                correct:true,
+                text:"la nina",
+                audioSrc:"/es_girl.mp3"
+            },
+            {
+                challengeId:6,//Which one of thes is the girl
+                imageSrc:"/boy.png",
+                correct:false,
+                text:"el nino",
+                audioSrc:"/es_boy.mp3"
+            },
+        ])
+
+
+        await db.insert(schema.challenges).values([
+            {
+                id:7,
+                lessonId:3,//Verbs
+                type:"SELECT",
+                order:1,
+                question:'Which one of these is “the boy”?'
+            },
+            {
+                id:8,
+                lessonId:3,//Verbs
+                type:"ASSIST",
+                order:2,
+                question:'"the woman"'
+            },
+            {
+                id:9,
+                lessonId:3,//Verbs
+                type:"SELECT",
+                order:3,
+                question:'Which one of these is “the girl”?'
+            }
+        ])
+
+        await db.insert(schema.challengeOptions).values([
+            {
+                challengeId:7,//Which one of thes is the boy
+                imageSrc:"/man.png",
+                correct:false,
+                text:"el hombre",
+                audioSrc:"/es_man.mp3"
+            },
+            {
+                challengeId:7,//Which one of thes is the boy
+                imageSrc:"/girl.png",
+                correct:false,
+                text:"la nina",
+                audioSrc:"/es_girl.mp3"
+            },
+            {
+                challengeId:7,//Which one of thes is the boy
+                imageSrc:"/boy.png",
+                correct:true,
+                text:"el nino",
+                audioSrc:"/es_boy.mp3"
+            },
         ])
 
         console.log("Seeding finished");
