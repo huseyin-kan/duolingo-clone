@@ -13,3 +13,8 @@ Store: Zustand
 Payment: Stripe
 
 Admin Side: react-admin, ra-data-simple-rest
+
+
+# Demo
+
+https://duolingo-clone-m32uogrlr-huseyins-projects-4ad9627c.vercel.app
